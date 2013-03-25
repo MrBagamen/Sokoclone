@@ -20,23 +20,15 @@ void Player::Init()
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, w, h, 0, GL_BGRA, GL_UNSIGNED_BYTE, img.getPixelsPtr());
 }
 
-void Player::Cycle(bool *keys)
+void Player::Cycle()
 {
-	if(keys[sf::Keyboard::Left])
+	if(isKeyPressed(sf::Keyboard::Left))
 	{
 		x -= speed;
 	}
-	if(keys[sf::Keyboard::Right])
+	if(isKeyPressed(sf::Keyboard::Right))
 	{
 		x += speed;
-	}
-	if(keys[sf::Keyboard::Up])
-	{
-		y -= speed;
-	}
-	if(keys[sf::Keyboard::Down])
-	{
-		y += speed;
 	}
 
 	//Draw Player
@@ -52,4 +44,16 @@ void Player::SetPos(int _x, int _y)
 {
 	x = _x;
 	y = _y;
+}
+
+bool Player::isKeyPressed(sf::Keyboard::Key k)
+{
+	if(sf::Event::KeyPressed)
+	{
+		if(sf::Keyboard::isKeyPressed(k))
+		{
+			return true;
+		}
+	}
+	return false;
 }

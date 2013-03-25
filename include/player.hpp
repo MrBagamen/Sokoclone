@@ -10,12 +10,12 @@ class Player
 {
 public:
 	void Init();
-	void Cycle(bool *keys);
+	void Cycle();
 	void SetPos(int _x, int _y);
 
 private:
 	int x, y, w, h;
-	int speed = 4;
+	int speed = 32;
 	sf::Image img;
 	GLuint tex;
 	GLint rect[8];
@@ -23,6 +23,8 @@ private:
 							1.0f, 0.0f,
 							1.0f, 1.0f,
 							0.0f, 1.0f,};
+
+	bool isKeyPressed(sf::Keyboard::Key k);
 };
 
 #endif

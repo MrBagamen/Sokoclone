@@ -44,10 +44,8 @@ int main()
 		glClear(GL_COLOR_BUFFER_BIT);
 		glLoadIdentity();
 
-		printf("FrameTime: %d\n", deltaTimer.getElapsedTime().asMilliseconds());
-
 		//Render shit
-		p.Cycle(keys);
+		p.Cycle();
 
 		win.display();
 		if(frameTimer.getElapsedTime().asSeconds() >= 1.0f)
@@ -57,7 +55,6 @@ int main()
 			frameTimer.restart();
 		}
 		frame++;
-		deltaTimer.restart();
 	}
 	return 0;
 }
