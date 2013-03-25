@@ -7,6 +7,7 @@ int main()
 	sf::RenderWindow win(sf::VideoMode(800, 600, 32), "Shitpickle", sf::Style::Close);
 	sf::Event event;
 	win.setVerticalSyncEnabled(true);
+	win.setKeyRepeatEnabled(false);
 
 	InitGL();
 
