@@ -22,9 +22,21 @@ void Player::Init()
 
 void Player::Cycle(bool *keys)
 {
+	if(keys[sf::Keyboard::Left])
+	{
+		x -= speed;
+	}
+	if(keys[sf::Keyboard::Right])
+	{
+		x += speed;
+	}
 	if(keys[sf::Keyboard::Up])
 	{
-		y -= 32;
+		y -= speed;
+	}
+	if(keys[sf::Keyboard::Down])
+	{
+		y += speed;
 	}
 
 	//Draw Player

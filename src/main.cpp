@@ -16,6 +16,7 @@ int main()
 	//Count FPS
 	int frame = 0;
 	sf::Clock frameTimer;
+	sf::Clock deltaTimer;
 
 	//Test Player
 	Player p;
@@ -43,6 +44,8 @@ int main()
 		glClear(GL_COLOR_BUFFER_BIT);
 		glLoadIdentity();
 
+		printf("FrameTime: %d\n", deltaTimer.getElapsedTime().asMilliseconds());
+
 		//Render shit
 		p.Cycle(keys);
 
@@ -54,8 +57,8 @@ int main()
 			frameTimer.restart();
 		}
 		frame++;
+		deltaTimer.restart();
 	}
-
 	return 0;
 }
 
@@ -67,7 +70,7 @@ void InitGL()
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
-	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+	glClearColor(0.1f, 0.5f, 0.0f, 1.0f);
 
 	glDisable(GL_DEPTH_TEST);
 	glEnable(GL_TEXTURE_2D);

@@ -15,6 +15,7 @@ public:
 
 private:
 	int x, y, w, h;
+	int speed = 4;
 	sf::Image img;
 	GLuint tex;
 	GLint rect[8];
