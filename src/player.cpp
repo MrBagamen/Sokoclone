@@ -3,7 +3,7 @@
 void Player::Init()
 {
 	x = y = 0;
-	img.loadFromFile("res/test.png");
+	img.loadFromFile("res/player.png");
 	w = img.getSize().x;
 	h = img.getSize().y;
 
