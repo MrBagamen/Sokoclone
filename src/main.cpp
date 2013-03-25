@@ -1,12 +1,9 @@
 #include "../include/player.hpp"
 
-bool keys[512];
 void InitGL();
 
 int main()
 {
-	memset(keys, 0, 512);
-
 	sf::RenderWindow win(sf::VideoMode(800, 600, 32), "Shitpickle", sf::Style::Close);
 	sf::Event event;
 	win.setVerticalSyncEnabled(true);
@@ -31,16 +28,17 @@ int main()
 			{
 				case sf::Event::Closed:
 					win.close();
+					break;
 				case sf::Event::KeyPressed:
-					keys[event.key.code] = true;
-				break;
-				case sf::Event::KeyReleased:
-					keys[event.key.code] = false;
-				break;
+					if (event.key.code == sf::Keyboard::Escape)
+					{
+						win.close();
+					}
+					p.OnKeyPressed(event.key.code);
+					break;
 				default:;
 			}
 		}
-		if(keys[sf::Keyboard::Escape]){win.close();}
 		glClear(GL_COLOR_BUFFER_BIT);
 		glLoadIdentity();
 

@@ -12,6 +12,7 @@ public:
 	void Init();
 	void Cycle();
 	void SetPos(int _x, int _y);
+	void OnKeyPressed(sf::Keyboard::Key key);
 
 private:
 	int x, y, w, h;
@@ -23,8 +24,6 @@ private:
 							1.0f, 0.0f,
 							1.0f, 1.0f,
 							0.0f, 1.0f,};
-
-	bool isKeyPressed(sf::Keyboard::Key k);
 };
 
 #endif
