@@ -22,15 +22,6 @@ void Player::Init()
 
 void Player::Cycle()
 {
-	if(isKeyPressed(sf::Keyboard::Left))
-	{
-		x -= speed;
-	}
-	if(isKeyPressed(sf::Keyboard::Right))
-	{
-		x += speed;
-	}
-
 	//Draw Player
 	glPushMatrix();
 	glTranslatef(x+(w/2), y+(h/2), 0.0f);
@@ -46,14 +37,16 @@ void Player::SetPos(int _x, int _y)
 	y = _y;
 }
 
-bool Player::isKeyPressed(sf::Keyboard::Key k)
+void Player::OnKeyPressed(sf::Keyboard::Key key)
 {
-	if(sf::Event::KeyPressed)
+	switch (key)
 	{
-		if(sf::Keyboard::isKeyPressed(k))
-		{
-			return true;
-		}
+		case sf::Keyboard::Left:
+			x -= speed;
+			break;
+		case sf::Keyboard::Right:
+			x += speed;
+			break;
+		default:;
 	}
-	return false;
 }
