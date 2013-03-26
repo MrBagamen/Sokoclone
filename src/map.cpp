@@ -20,7 +20,7 @@ void Map::Load(const std::string& filename)
     {
         if (c == '1')
         {
-            walls.emplace_back(Wall(x * 32, y * 32));
+            walls.emplace_back(x * 32, y * 32);
         }
         if (c == '\n')
         {
