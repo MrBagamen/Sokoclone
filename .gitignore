@@ -1,3 +1,5 @@
 Sokoclone
 *.d
 *.o
+CMakeLists.txt.user
+*.sublime*

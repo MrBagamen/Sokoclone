@@ -8,13 +8,13 @@ class Wall
 public:
 	int x, y;
 
-	void Init();
+    Wall(int x, int y);
+    void Draw() const;
 	void Cycle(Player &p);
 	void SetPos(int _x, int _y);
 private:
 	int w, h;
-	sf::Image img;
-	GLuint tex;
+    sf::Texture tex;
 	GLint rect[8];
 	GLfloat texcoord[8] = {	0.0f, 0.0f,
 							1.0f, 0.0f,
