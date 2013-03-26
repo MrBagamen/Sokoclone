@@ -6,16 +6,20 @@
 #include <cstdio>
 #include <cstring>
 
+enum {UP, DOWN, LEFT, RIGHT};
+
 class Player
 {
 public:
+	int x, y, d = 0;
+
 	void Init();
 	void Cycle();
 	void SetPos(int _x, int _y);
 	void OnKeyPressed(sf::Keyboard::Key key);
 
 private:
-	int x, y, w, h;
+	int w, h;
 	int speed = 32;
 	sf::Image img;
 	GLuint tex;

@@ -1,4 +1,6 @@
 #include "../include/player.hpp"
+#include "../include/wall.hpp"
+#include "../include/map.hpp"
 
 void InitGL();
 
@@ -16,10 +18,15 @@ int main()
 	sf::Clock frameTimer;
 	sf::Clock deltaTimer;
 
-	//Test Player
+	//Player
 	Player p;
 	p.Init();
-	p.SetPos(100, 100);
+	p.SetPos(128, 128);
+
+	//Test map
+	Map m;
+	m.Load("res/map.txt");
+	//Parse map
 
 	while(win.isOpen())
 	{
