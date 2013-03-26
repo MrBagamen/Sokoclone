@@ -10,7 +10,7 @@ void Map::Load(const char* filePath)
 	map_size = ftell(file);
 	rewind(file);
 
-	map = new char(map_size);
+    map = new char[map_size];
 	fread(map, 1, map_size, file);
 	fclose(file);
 
