@@ -57,13 +57,13 @@
 ##==========================================================================
 
 # The pre-processor and compiler options.
-MY_CFLAGS = -std=c++11
+MY_CFLAGS = -std=c++11 -pedantic -Wall -Wextra
 
 # The linker options.
 MY_LIBS   = -lsfml-system -lsfml-graphics -lsfml-window -lGL
 
 # The pre-processor options used by the cpp (man cpp for more).
-CPPFLAGS  = -Wall
+CPPFLAGS  =
 
 # The options used in linking as well as in any direct use of ld.
 LDFLAGS   =
