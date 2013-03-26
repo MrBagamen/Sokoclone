@@ -21,7 +21,6 @@ int main()
 
 	//Player
 	Player p;
-	p.Init();
 	p.SetPos(128, 128);
 
 	//Test map

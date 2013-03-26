@@ -13,7 +13,7 @@ class Player
 public:
 	int x, y, d = 0;
 
-	void Init();
+    Player();
 	void Cycle();
 	void SetPos(int _x, int _y);
 	void OnKeyPressed(sf::Keyboard::Key key);

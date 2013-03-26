@@ -1,16 +1,16 @@
 #include "../include/wall.hpp"
 
-void Wall::Init()
+Wall::Wall()
 {
-	x = y = 0;
+    x = y = 0;
     tex.loadFromFile("res/wall.png");
     w = tex.getSize().x;
     h = tex.getSize().y;
 
-	rect[0] = -w/2;rect[1] = -h/2;
-	rect[2] = w/2;rect[3] = -h/2;
-	rect[4] = w/2;rect[5] = h/2;
-	rect[6] = -w/2;rect[7] = h/2;
+    rect[0] = -w/2;rect[1] = -h/2;
+    rect[2] = w/2;rect[3] = -h/2;
+    rect[4] = w/2;rect[5] = h/2;
+    rect[6] = -w/2;rect[7] = h/2;
 }
 
 void Wall::Cycle(Player &p)

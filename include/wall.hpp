@@ -8,7 +8,7 @@ class Wall
 public:
 	int x, y;
 
-	void Init();
+    Wall();
 	void Cycle(Player &p);
 	void SetPos(int _x, int _y);
 private:
