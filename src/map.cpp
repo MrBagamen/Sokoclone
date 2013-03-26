@@ -13,7 +13,4 @@ void Map::Load(const char* filePath)
     map = new char[map_size];
 	fread(map, 1, map_size, file);
 	fclose(file);
-
-	//PRINT FILE 
-	printf("%s", map);
 }
