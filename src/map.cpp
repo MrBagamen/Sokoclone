@@ -1,16 +1,41 @@
 #include "../include/map.hpp"
 
-void Map::Load(const char* filePath)
+#include <fstream>
+#include <iostream>
+
+void Map::Load(const std::string& filename)
 {
-	FILE *file;
+    std::ifstream file(filename);
 
-	file = fopen(filePath, "rb");
-	if(file == nullptr){printf("Error loading %s\n", filePath);exit(0);}
-	fseek(file, 0, SEEK_END);
-	map_size = ftell(file);
-	rewind(file);
+    if (!file)
+    {
+        std::cerr << "PHAILED LOADING " << filename;
+        std::abort();
+    }
 
-    map = new char[map_size];
-	fread(map, 1, map_size, file);
-	fclose(file);
+    char c;
+    int x = 0, y = 0;
+
+    while (file.get(c))
+    {
+        if (c == '1')
+        {
+            walls.emplace_back(Wall(x * 32, y * 32));
+        }
+        if (c == '\n')
+        {
+            x = 0;
+            ++y;
+        }
+
+        ++x;
+    }
+}
+
+void Map::Draw()
+{
+    for (const Wall& w : walls)
+    {
+        w.Draw();
+    }
 }

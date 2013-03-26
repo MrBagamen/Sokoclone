@@ -8,7 +8,8 @@ class Wall
 public:
 	int x, y;
 
-    Wall();
+    Wall(int x, int y);
+    void Draw() const;
 	void Cycle(Player &p);
 	void SetPos(int _x, int _y);
 private:

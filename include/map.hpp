@@ -1,20 +1,18 @@
 #ifndef MAP_HPP_INCLUDED
 #define MAP_HPP_INCLUDED
 
-#include <cstdio>
-#include <cstdlib>
+#include <vector>
+#include <string>
+
+#include "wall.hpp"
 
 class Map
 {
 public:
-	char *map;
-	long map_size;
-	void Load(const char* filePath);
+    void Load(const std::string& filename);
+    void Draw();
 
-	~Map()
-	{
-		delete[] map;
-	}
+    std::vector<Wall> walls;
 };
 
 #endif
