@@ -23,7 +23,39 @@
 			"file": "main.cpp",
 			"settings":
 			{
-				"buffer_size": 1373,
+				"buffer_size": 1810,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/luka/Desktop/SFMLTest1/include/map.hpp",
+			"settings":
+			{
+				"buffer_size": 212,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "map.cpp",
+			"settings":
+			{
+				"buffer_size": 364,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/luka/Desktop/SFMLTest1/include/wall.hpp",
+			"settings":
+			{
+				"buffer_size": 360,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wall.cpp",
+			"settings":
+			{
+				"buffer_size": 1051,
 				"line_ending": "Unix"
 			}
 		},
@@ -31,7 +63,7 @@
 			"file": "/home/luka/Desktop/SFMLTest1/include/player.hpp",
 			"settings":
 			{
-				"buffer_size": 472,
+				"buffer_size": 516,
 				"line_ending": "Unix"
 			}
 		},
@@ -39,7 +71,15 @@
 			"file": "player.cpp",
 			"settings":
 			{
-				"buffer_size": 1000,
+				"buffer_size": 1185,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/luka/Desktop/SFMLTest1/res/map.txt",
+			"settings":
+			{
+				"buffer_size": 467,
 				"line_ending": "Unix"
 			}
 		}
@@ -68,6 +108,7 @@
 	},
 	"file_history":
 	[
+		"/home/luka/Desktop/SFMLTest1/include/map.cpp",
 		"/home/luka/Desktop/Random-Password-Generator/main.c",
 		"/home/luka/Desktop/C++ Proj1/src/main.cpp",
 		"/home/luka/Desktop/ChipEm/src/.main.cpp.swp"
@@ -120,15 +161,15 @@
 					"file": "main.cpp",
 					"settings":
 					{
-						"buffer_size": 1373,
+						"buffer_size": 1810,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								617,
+								617
 							]
 						],
 						"settings":
@@ -137,25 +178,129 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 225.0,
+						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/home/luka/Desktop/SFMLTest1/include/player.hpp",
+					"file": "/home/luka/Desktop/SFMLTest1/include/map.hpp",
 					"settings":
 					{
-						"buffer_size": 472,
+						"buffer_size": 212,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								126,
+								126
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "map.cpp",
+					"settings":
+					{
+						"buffer_size": 364,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								303,
+								303
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/luka/Desktop/SFMLTest1/include/wall.hpp",
+					"settings":
+					{
+						"buffer_size": 360,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								119,
+								119
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "wall.cpp",
+					"settings":
+					{
+						"buffer_size": 1051,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								694,
+								694
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/luka/Desktop/SFMLTest1/include/player.hpp",
+					"settings":
+					{
+						"buffer_size": 516,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								156,
+								156
 							]
 						],
 						"settings":
@@ -170,19 +315,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 6,
 					"file": "player.cpp",
 					"settings":
 					{
-						"buffer_size": 1000,
+						"buffer_size": 1185,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1158,
+								1158
 							]
 						],
 						"settings":
@@ -190,6 +335,32 @@
 							"auto_name": "",
 							"syntax": "Packages/C++/C++.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/luka/Desktop/SFMLTest1/res/map.txt",
+					"settings":
+					{
+						"buffer_size": 467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								31,
+								31
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

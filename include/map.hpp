@@ -8,6 +8,7 @@ class Map
 {
 public:
 	char *map;
+	long map_size;
 	void Load(const char* filePath);
 
 	~Map()

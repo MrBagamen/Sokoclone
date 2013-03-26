@@ -6,11 +6,13 @@
 class Wall
 {
 public:
+	int x, y;
+
 	void Init();
 	void Cycle(Player &p);
 	void SetPos(int _x, int _y);
 private:
-	int x, y, w, h;
+	int w, h;
 	sf::Image img;
 	GLuint tex;
 	GLint rect[8];

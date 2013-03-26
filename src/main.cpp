@@ -1,6 +1,7 @@
 #include "../include/player.hpp"
 #include "../include/wall.hpp"
 #include "../include/map.hpp"
+#include <vector>
 
 void InitGL();
 
@@ -26,7 +27,24 @@ int main()
 	//Test map
 	Map m;
 	m.Load("res/map.txt");
+	std::vector<Wall> w;
 	//Parse map
+	for(int i = 0, x = 0, y = 0; i < m.map_size; i++)
+	{
+		if(m.map[i] == '1')
+		{
+			Wall t;
+			t.x = x*32;
+			t.y = y*32;
+			w.push_back(t);
+		}
+		if(x > 24)
+		{
+			x = 0;
+			y++;
+		}
+		x++;
+	}
 
 	while(win.isOpen())
 	{
@@ -51,6 +69,11 @@ int main()
 		glLoadIdentity();
 
 		//Render shit
+		for(unsigned int i = 0; i < w.size(); i++)
+		{
+			Wall &t = w.at(i);
+			t.Cycle(p);
+		}
 		p.Cycle();
 
 		win.display();
