@@ -17,7 +17,6 @@ int main()
 	//Count FPS
 	int frame = 0;
 	sf::Clock frameTimer;
-	sf::Clock deltaTimer;
 
     sf::Texture playerTexture;
     playerTexture.loadFromFile("res/player.png");
@@ -58,7 +57,7 @@ int main()
 		win.display();
 		if(frameTimer.getElapsedTime().asSeconds() >= 1.0f)
 		{
-			printf("FPS: %d\n", frame);
+            win.setTitle("Sokoclone - FPS: " + std::to_string(frame));
 			frame = 0;
 			frameTimer.restart();
 		}
