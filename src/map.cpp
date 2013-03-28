@@ -26,6 +26,7 @@ void Map::Load(const std::string& filename)
         {
             x = 0;
             ++y;
+            continue;
         }
 
         ++x;
