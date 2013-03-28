@@ -16,10 +16,12 @@ add_executable(Sokoclone
 include/map.hpp
 include/player.hpp
 include/wall.hpp
+include/entity.hpp
 src/main.cpp
 src/map.cpp
 src/player.cpp
 src/wall.cpp
+src/entity.cpp
 )
 
 target_link_libraries(Sokoclone ${SFML_LIBRARIES} ${OPENGL_LIBRARY})

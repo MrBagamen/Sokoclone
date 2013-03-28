@@ -22,12 +22,11 @@ int main()
     playerTexture.loadFromFile("res/player.png");
 
 	//Player
-    Player p(playerTexture);
-	p.SetPos(128, 128);
+    Player player(playerTexture, 128, 128);
 
 	//Test map
-	Map m;
-	m.Load("res/map.txt");
+    Map map;
+    map.Load("res/map.txt");
 
 	while(win.isOpen())
 	{
@@ -43,7 +42,7 @@ int main()
 					{
 						win.close();
 					}
-					p.OnKeyPressed(event.key.code);
+                    player.OnKeyPressed(event.key.code);
 					break;
 				default:;
 			}
@@ -51,9 +50,8 @@ int main()
 		glClear(GL_COLOR_BUFFER_BIT);
 		glLoadIdentity();
 
-		p.Cycle();
-
-        m.Draw();
+        map.Draw();
+        player.Draw();
 		win.display();
 		if(frameTimer.getElapsedTime().asSeconds() >= 1.0f)
 		{
