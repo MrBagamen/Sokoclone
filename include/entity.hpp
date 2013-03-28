@@ -14,6 +14,7 @@ protected:
 private:
     const sf::Texture& tex;
     GLint rect[8];
+    friend class Map;
 };
 
 #endif // ENTITY_HPP

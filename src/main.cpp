@@ -14,19 +14,17 @@ int main()
 
 	InitGL();
 
-	//Count FPS
+    // For FPS counting
 	int frame = 0;
 	sf::Clock frameTimer;
 
     sf::Texture playerTexture;
     playerTexture.loadFromFile("res/player.png");
 
-	//Player
-    Player player(playerTexture, 128, 128);
-
-	//Test map
     Map map;
     map.Load("res/map.txt");
+
+    Player player(playerTexture, 128, 128, map);
 
 	while(win.isOpen())
 	{

@@ -41,3 +41,16 @@ void Map::Draw()
         w.Draw();
     }
 }
+
+bool Map::isWallAt(int x, int y) const
+{
+    for (const Wall& w : walls)
+    {
+        if (w.x == x && w.y == y)
+        {
+            return true;
+        }
+    }
+
+    return false;
+}

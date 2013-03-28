@@ -1,7 +1,6 @@
 #ifndef WALL_HPP_INCLUDED
 #define WALL_HPP_INCLUDED
 
-#include "player.hpp"
 #include "entity.hpp"
 	
 class Wall : public Entity
