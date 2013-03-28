@@ -23,6 +23,7 @@ void Map::Load(const std::string& filename)
         {
             walls.emplace_back(wallTexture, x * 32, y * 32);
         }
+
         if (c == '\n')
         {
             x = 0;
@@ -36,7 +37,7 @@ void Map::Load(const std::string& filename)
 
 void Map::Draw()
 {
-    for (const Wall& w : walls)
+    for (const Wall & w : walls)
     {
         w.Draw();
     }
@@ -44,7 +45,7 @@ void Map::Draw()
 
 bool Map::isWallAt(int x, int y) const
 {
-    for (const Wall& w : walls)
+    for (const Wall & w : walls)
     {
         if (w.x == x && w.y == y)
         {
