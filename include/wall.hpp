@@ -2,7 +2,7 @@
 #define WALL_HPP_INCLUDED
 
 #include "entity.hpp"
-	
+
 class Wall : public Entity
 {
 public:
