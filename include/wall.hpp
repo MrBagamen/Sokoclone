@@ -1,7 +1,7 @@
 #ifndef WALL_HPP_INCLUDED
 #define WALL_HPP_INCLUDED
 
-#include "../include/player.hpp"
+#include "player.hpp"
 	
 class Wall
 {

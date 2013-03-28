@@ -1,6 +1,6 @@
-#include "../include/player.hpp"
-#include "../include/wall.hpp"
-#include "../include/map.hpp"
+#include "player.hpp"
+#include "wall.hpp"
+#include "map.hpp"
 #include <vector>
 
 void InitGL();

@@ -1,4 +1,4 @@
-#include "../include/wall.hpp"
+#include "wall.hpp"
 
 Wall::Wall(int x, int y)
 {
