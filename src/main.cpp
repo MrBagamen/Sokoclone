@@ -19,8 +19,11 @@ int main()
 	sf::Clock frameTimer;
 	sf::Clock deltaTimer;
 
+    sf::Texture playerTexture;
+    playerTexture.loadFromFile("res/player.png");
+
 	//Player
-	Player p;
+    Player p(playerTexture);
 	p.SetPos(128, 128);
 
 	//Test map

@@ -1,9 +1,9 @@
 #include "player.hpp"
 
-Player::Player()
+Player::Player(const sf::Texture &texture) :
+    tex(texture)
 {
     x = y = 0;
-    tex.loadFromFile("res/player.png");
     w = tex.getSize().x;
     h = tex.getSize().y;
 

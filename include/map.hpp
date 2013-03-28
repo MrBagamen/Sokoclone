@@ -13,6 +13,7 @@ public:
     void Draw();
 
     std::vector<Wall> walls;
+    sf::Texture wallTexture;
 };
 
 #endif

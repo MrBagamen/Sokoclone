@@ -1,10 +1,10 @@
 #include "wall.hpp"
 
-Wall::Wall(int x, int y)
+Wall::Wall(const sf::Texture &texture, int x, int y) :
+    tex(texture)
 {
     this->x = x;
     this->y = y;
-    tex.loadFromFile("res/wall.png");
     w = tex.getSize().x;
     h = tex.getSize().y;
 
