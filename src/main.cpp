@@ -1,6 +1,6 @@
-#include "../include/player.hpp"
-#include "../include/wall.hpp"
-#include "../include/map.hpp"
+#include "player.hpp"
+#include "wall.hpp"
+#include "map.hpp"
 #include <vector>
 
 void InitGL();
@@ -14,18 +14,17 @@ int main()
 
 	InitGL();
 
-	//Count FPS
+    // For FPS counting
 	int frame = 0;
 	sf::Clock frameTimer;
-	sf::Clock deltaTimer;
 
-	//Player
-	Player p;
-	p.SetPos(128, 128);
+    sf::Texture playerTexture;
+    playerTexture.loadFromFile("res/player.png");
 
-	//Test map
-	Map m;
-	m.Load("res/map.txt");
+    Map map;
+    map.Load("res/map.txt");
+
+    Player player(playerTexture, 128, 128, map);
 
 	while(win.isOpen())
 	{
@@ -41,7 +40,7 @@ int main()
 					{
 						win.close();
 					}
-					p.OnKeyPressed(event.key.code);
+                    player.OnKeyPressed(event.key.code);
 					break;
 				default:;
 			}
@@ -49,13 +48,12 @@ int main()
 		glClear(GL_COLOR_BUFFER_BIT);
 		glLoadIdentity();
 
-		p.Cycle();
-
-        m.Draw();
+        map.Draw();
+        player.Draw();
 		win.display();
 		if(frameTimer.getElapsedTime().asSeconds() >= 1.0f)
 		{
-			printf("FPS: %d\n", frame);
+            win.setTitle("Sokoclone - FPS: " + std::to_string(frame));
 			frame = 0;
 			frameTimer.restart();
 		}

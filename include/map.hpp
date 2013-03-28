@@ -11,8 +11,10 @@ class Map
 public:
     void Load(const std::string& filename);
     void Draw();
-
+    bool isWallAt(int x, int y) const;
+private:
     std::vector<Wall> walls;
+    sf::Texture wallTexture;
 };
 
 #endif

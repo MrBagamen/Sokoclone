@@ -57,7 +57,7 @@
 ##==========================================================================
 
 # The pre-processor and compiler options.
-MY_CFLAGS = -std=c++11 -pedantic -Wall -Wextra
+MY_CFLAGS = -Iinclude -std=c++11 -pedantic -Wall -Wextra
 
 # The linker options.
 MY_LIBS   = -lsfml-system -lsfml-graphics -lsfml-window -lGL
