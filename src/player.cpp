@@ -1,6 +1,6 @@
 #include "player.hpp"
 
-Player::Player(const sf::Texture& texture, int x, int y, const Map& map) :
+Player::Player(const sf::Texture& texture, int x, int y, Map& map) :
     Entity(texture, x, y),
     map(map)
 {
@@ -15,6 +15,14 @@ void Player::OnKeyPressed(sf::Keyboard::Key key)
         {
             x -= speed;
             direction = LEFT;
+        }
+        if (map.isMovableAt(x - speed, y) != 0)
+        {
+            for(unsigned int i = 0; i < map.movable.size(); i++)
+            {
+                Movable& m = map.movable[i];
+                m.x -= 32;
+            }
         }
 
         break;

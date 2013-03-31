@@ -10,7 +10,7 @@ enum {UP, DOWN, LEFT, RIGHT};
 class Player : public Entity
 {
 public:
-    Player(const sf::Texture& texture, int x, int y, const Map& map);
+    Player(const sf::Texture& texture, int x, int y, Map& map);
     void OnKeyPressed(sf::Keyboard::Key key);
 
 private:

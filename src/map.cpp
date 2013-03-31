@@ -64,3 +64,17 @@ bool Map::isWallAt(int x, int y) const
 
     return false;
 }
+
+int Map::isMovableAt(int x, int y) const
+{
+    for(unsigned int i = 0; i < movable.size(); i++)
+    {
+        const Movable& m = movable[i];
+        if (m.x == x && m.y == y)
+        {
+            return true;
+        }
+    }
+
+    return 0;
+}

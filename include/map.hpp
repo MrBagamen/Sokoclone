@@ -13,9 +13,11 @@ public:
     void Load(const std::string& filename);
     void Draw();
     bool isWallAt(int x, int y) const;
+    int isMovableAt(int x, int y) const;
+
+    std::vector<Movable> movable;
 private:
     std::vector<Wall> walls;
-    std::vector<Movable> movable;
     sf::Texture wallTexture;
     sf::Texture movableTexture;
 };

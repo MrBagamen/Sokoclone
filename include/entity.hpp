@@ -9,7 +9,7 @@ class Entity
 public:
     Entity(const sf::Texture& texture, int x = 0, int y = 0);
     void Draw() const;
-protected:
+//protected:
     int x, y, w, h;
 private:
     const sf::Texture& tex;
