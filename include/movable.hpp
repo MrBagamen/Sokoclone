@@ -2,12 +2,11 @@
 #define MOVABLE_HPP_INCLUDED
 
 #include "entity.hpp"
-#include "map.hpp"
 
 class Movable : public Entity
 {
 public:
-	Wall(const sf::Texture& texture, int x, int y);
+    Movable(const sf::Texture& texture, int x, int y);
 };
 
 #endif
