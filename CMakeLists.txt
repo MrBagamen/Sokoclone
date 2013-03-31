@@ -17,11 +17,13 @@ include/map.hpp
 include/player.hpp
 include/wall.hpp
 include/entity.hpp
+include/movable.hpp
 src/main.cpp
 src/map.cpp
 src/player.cpp
 src/wall.cpp
 src/entity.cpp
+src/movable.cpp
 )
 
 target_link_libraries(Sokoclone ${SFML_LIBRARIES} ${OPENGL_LIBRARY})
