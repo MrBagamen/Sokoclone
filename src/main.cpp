@@ -1,5 +1,6 @@
 #include "player.hpp"
 #include "wall.hpp"
+#include "movable.hpp"
 #include "map.hpp"
 #include <vector>
 

@@ -7,6 +7,7 @@ class Wall : public Entity
 {
 public:
     Wall(const sf::Texture& texture, int x, int y);
+    
 };
 
 #endif

@@ -5,6 +5,7 @@
 #include <string>
 
 #include "wall.hpp"
+#include "movable.hpp"
 
 class Map
 {
@@ -14,7 +15,9 @@ public:
     bool isWallAt(int x, int y) const;
 private:
     std::vector<Wall> walls;
+    std::vector<Movable> movable;
     sf::Texture wallTexture;
+    sf::Texture movableTexture;
 };
 
 #endif
