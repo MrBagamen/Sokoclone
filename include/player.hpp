@@ -16,7 +16,7 @@ public:
 private:
     int speed = 32;
     int direction = UP;
-    const Map& map;
+    Map& map;
 };
 
 #endif
