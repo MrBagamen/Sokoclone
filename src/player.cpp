@@ -16,12 +16,13 @@ void Player::OnKeyPressed(sf::Keyboard::Key key)
             x -= speed;
             direction = LEFT;
         }
-        if (map.isMovableAt(x - speed, y) != 0)
+        for(unsigned int i = 0; i < map.movable.size(); i++)
         {
-            for(unsigned int i = 0; i < map.movable.size(); i++)
+            Movable& m = map.movable[i];
+            printf("X: %d, Y: %d\n", m.x, m.y);
+            if(m.x == x && m.y == y)
             {
-                Movable& m = map.movable[i];
-                m.x -= 32;
+                m.x -= speed;
             }
         }
 
